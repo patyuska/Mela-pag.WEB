@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Espacio Vivo - Muebles en Melamina</title>
+  <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+  <header>
+    <img src="IMAGENES/logo.png" alt="">
+    <h1>ESPACIO VIVO</h1>
+    <p>Convertimos tus ideas en muebles de melamina modernos, elegantes y funcionales.</p>
+  </header>
+
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#galeria">Galería</a>
+    <a href="#cotiza">Cotiza Ahora</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <section id="inicio">
+    <h2>Bienvenidos a Espacio Vivo</h2>
+    <p>
+      Somos especialistas en el diseño, producción y venta de <strong>muebles exclusivos en MELAMINA</strong>
+      para el hogar, oficina o local comercial.
+      En <b>Espacio Vivo</b> creamos mobiliario a medida de tus necesidades con calidad, elegancia y garantía.
+    </p>
+  </section>
+
+  <section id="servicios">
+    <h2>Servicios</h2>
+    <div class="servicios">
+      <div class="servicio">
+        <img src="COCINAS/COCINA1.jpg" alt="Cocinas">
+        <img src="COCINAS/COCINA2.jpg" alt="Cocinas">
+        <h3>Cocinas</h3>
+        <p>Diseños modernos, ergonómicos y personalizados con melamina de alta calidad.</p>
+      </div>
+      <div class="servicio">
+        <img src="SALA -COMEDOR/SALA1.jpeg" alt="Sala y Comedor">
+        <img src="SALA -COMEDOR/SALA2.JPG" alt="Sala y Comedor">
+        <h3>Sala y Comedor</h3>
+        <p>Ambientes cálidos y elegantes con muebles exclusivos adaptados a tu espacio.</p>
+      </div>
+      <div class="servicio">
+        <img src="DORMITORIOS/DORMITORIO1.jpg.jpg" alt="Dormitorios">
+        <img src="GALERIA/dormitorio.png" alt="Dormitorios">
+        <h3>Dormitorios</h3>
+        <p>Muebles funcionales y sofisticados que reflejan tu estilo personal.</p>
+      </div>
+      <div class="servicio">
+        <img src="OFICINAS/ESCRITORIO1.jpg" alt="Oficinas">
+        <img src="OFICINAS/ESCRITORIO2.jpg" alt="Oficinas">
+        <h3>Oficinas</h3>
+        <p>Diseño profesional y funcional para optimizar tu espacio de trabajo.</p>
+      </div>
+    </div>
+
+    <div class="cta">
+      <button onclick="scrollToSection('cotiza')">Cotiza Ahora</button>
+    </div>
+  </section>
+
+  <section id="galeria">
+    <h2>Galería</h2>
+    <div class="galeria">
+      <img src="GALERIA/cocina.png" alt="Cocina moderna">
+      <img src="GALERIA/sala.png" alt="Sala elegante">
+      <img src="GALERIA/dormitorio.png" alt="Dormitorio">
+      <img src="GALERIA/oficina.png" alt="Oficina">
+    </div>
+  </section>
+
+  <section id="cotiza">
+    <h2>Cotiza tu Proyecto</h2>
+    <form id="cotizacion-form">
+      <input type="text" id="nombre" placeholder="Nombre completo" required>
+      <input type="email" id="email" placeholder="Correo electrónico" required>
+      <input type="tel" id="telefono" placeholder="Teléfono o WhatsApp" required>
+      <textarea id="mensaje" rows="4" placeholder="Describe tu proyecto (medidas, tipo de mueble, etc.)"></textarea>
+      <button type="submit">Enviar Cotización</button>
+    </form>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p><strong>Email:</strong> espaciovivo23@gmail.com</p>
+    <p><strong>Ubicación:</strong> Calle J, Lote 15, Mz. 36, Urb. Pachacamac Residencial Parcela 3A – Parque Industrial
+      Villa El Salvador</p>
+    <p><strong>Teléfono / WhatsApp:</strong> <a href="https://wa.me/51942861410" target="_blank">942 861 410</a></p>
+    <p><strong>Garantía:</strong> 1 año | <strong>Fabricantes directos</strong> | <strong>Diseños a medida</strong></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Espacio Vivo. Todos los derechos reservados.</p>
+    <p><a href="mailto:espaciovivo23@gmail.com">espaciovivo23@gmail.com</a></p>
+
+    <div class="contenedor-redes">
+      <img src="REDES/facebook.png" alt="">
+      <img src="REDES/instagram.png" alt="">
+      <img src="REDES/tiktok.png" alt="">
+      <img src="REDES/youtube.png" alt="">
+    </div>
+  </footer>
+
+  <!-- BOTÓN WHATSAPP -->
+  <button id="whatsapp-btn" title="¿Cómo puedo ayudarte?" onclick="abrirWhatsApp()">💬</button>
+
+  <script>
+    // Scroll suave a secciones
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Enviar formulario de cotización (solo simulación)
+    document.getElementById('cotizacion-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('¡Gracias por tu interés! Nos comunicaremos contigo pronto para tu cotización personalizada.');
+      this.reset();
+    });
+
+    // Abrir WhatsApp
+    function abrirWhatsApp() {
+      window.open('https://wa.me/51942861410?text=¡Hola! Quiero más información sobre los muebles de Espacio Vivo.', '_blank');
+    }
+  </script>
+
+</body>
+
+</html>
